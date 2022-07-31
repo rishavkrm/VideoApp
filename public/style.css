@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Orbitron:wght@400;500;600;700;800;900&family=Supermercado+One&display=swap');
+
+body{
+    background-color: rgb(2, 2, 2);
+    width: 100%;
+    height:100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 300px;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10%;
+    border-radius: 50px;
+    
+  }
+
+  #control{
+    position:fixed;
+    top:90vh;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  fas{
+    font-size: 2rem;
+  }
+  button{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+
+  /* Button styling ------------------------*/
+  .glow-on-hover {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+#landing_container{
+  position: fixed;
+  margin-left: 0;
+  margin-right: 0;
+  top: 12vh;
+ 
+  display: flex;
+  flex-direction: row;
+
+}
+.landing{
+  width: 250px;
+  position: absolute;
+  left: 30vw;
+}
+.submit_button{
+  width: 8vh;
+  position: absolute;
+  left: 41vw;
+}
+form{
+  display: flex;
+}

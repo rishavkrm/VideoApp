@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/97be429e98.js" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="stars.css"> -->
+  <title>Document</title>
+</head>
+<body>
+  <div id="landing_container" >
+    <form class="form" action="/create" method="post">
+      <button id="createRoom" class="glow-on-hover"> New meeting</button>
+    </form>
+      <form class="form" action="/join" method="post">
+        <input type="text" class="landing glow-on-hover" placeholder="Enter meeting id" style="padding-left: 20px;padding-right: 20px;" name="meetingId">
+        <button type="submit" class="glow-on-hover submit_button" name="button">Join</button>
+      </form>
+  </div>
+  
+</body>
+</html>
